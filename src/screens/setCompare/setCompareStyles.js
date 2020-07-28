@@ -1,0 +1,75 @@
+import { StyleSheet } from 'react-native';
+
+export default StyleSheet.create({
+	container: {
+		minHeight: '100%',
+		padding: 36,
+		// justifyContent: 'space-between',
+	},
+	meBlock: {
+		alignItems: 'center',
+		justifyContent: 'center',
+		paddingHorizontal: 10,
+		paddingVertical: 40,
+		borderWidth: 1,
+		borderStyle: 'dotted',
+		borderColor: '#ccc',
+		marginBottom: 25,
+	},
+	meImageWrapper: {
+		width: '100%',
+		height: 180,
+		marginBottom: 30,
+	},
+	meImage: {
+		width: '100%',
+		height: '100%',
+		flex: 1,
+	},
+	selectMeButton: {
+		alignItems: 'center',
+		justifyContent: 'center',
+		paddingHorizontal: 10,
+		paddingVertical: 20,
+		borderWidth: 1,
+		borderStyle: 'dotted',
+		borderColor: '#ccc',
+		marginBottom: 25,
+	},
+	buttonCaption: {
+		fontSize: 28,
+		fontWeight: 'bold',
+	},
+	compareButtonsWrapper: {
+		flexDirection: 'row',
+		alignItems: 'center',
+		justifyContent: 'space-between',
+	},
+	compareButton: {
+		alignItems: 'center',
+		justifyContent: 'center',
+		paddingHorizontal: 10,
+		// paddingVertical: 40,
+		borderWidth: 1,
+		borderStyle: 'dotted',
+		borderColor: '#ccc',
+		marginBottom: 25,
+		width: '35%',
+		height: '80%',
+	},
+	answerImageWrapper: {
+		width: '45%',
+		height: 180,
+	},
+	answerBlock: {
+		alignItems: 'center',
+		justifyContent: 'center',
+		paddingHorizontal: 10,
+		paddingVertical: 40,
+		borderWidth: 1,
+		borderStyle: 'dotted',
+		borderColor: '#ccc',
+		marginBottom: 25,
+		width: '45%',
+	},
+});
