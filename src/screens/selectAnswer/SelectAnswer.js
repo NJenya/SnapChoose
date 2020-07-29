@@ -20,6 +20,8 @@ const options = {
 	},
 }
 
+
+
 const SelectAnswer = ({ navigation, route }) => {
 	const [imageCameraData, onChangeImageCamerData] = useState(null)
 	const [imageLibraryData, onChangeImageLibraryData] = useState(null)
