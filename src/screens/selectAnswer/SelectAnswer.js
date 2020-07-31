@@ -34,6 +34,7 @@ const SelectAnswer = ({ navigation, route }) => {
 			} else if (response.customButton) {
 				console.log('User tapped custom button: ', response.customButton)
 			} else if ((route.params.answerNumber = 'first')) {
+				console.log('response', response)
 				navigation.navigate('SetCompare', {
 					responceType: 'first',
 					answerNumber: 'first',
@@ -53,6 +54,7 @@ const SelectAnswer = ({ navigation, route }) => {
 		})
 	}
 	const callImageLibraryPicker = () => {
+		console.log('image handler')
 		ImagePicker.launchImageLibrary(options, (response) => {
 			if (response.didCancel) {
 				console.log('User cancelled image picker')
@@ -61,20 +63,19 @@ const SelectAnswer = ({ navigation, route }) => {
 			} else if (response.customButton) {
 				console.log('User tapped custom button: ', response.customButton)
 			} else if (route.params.answerNumber === 'first') {
+				console.log('first responce', response)
 				navigation.navigate('SetCompare', {
 					responceType: 'first',
-					answerNumber: 'first',
 					answerType: 'image',
 					answerData: response,
 				})
 			} else if (route.params.answerNumber === 'second') {
 				navigation.navigate('SetCompare', {
 					responceType: 'second',
-					answerNumber: 'second',
 					answerType: 'image',
 					answerData: response,
 				})
-				onChangeImageCamerData(response)
+				onChangeImageLibraryData(response)
 			}
 		})
 	}
@@ -83,14 +84,12 @@ const SelectAnswer = ({ navigation, route }) => {
 		if (route.params.answerNumber === 'first') {
 			navigation.navigate('SetCompare', {
 				responceType: 'first',
-				answerNumber: 'first',
 				answerType: 'text',
 				answerData: textData,
 			})
 		} else if (route.params.answerNumber === 'second') {
 			navigation.navigate('SetCompare', {
 				responceType: 'second',
-				answerNumber: 'second',
 				answerType: 'text',
 				answerData: textData,
 			})
