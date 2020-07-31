@@ -9,24 +9,20 @@ const SetCompare = ({ navigation, route }) => {
 	const [firstAnswerData, setFirstAnswerData] = useState(null)
 	const [typeOfAnswer, setTypeOfAnswer] = useState(null)
 	const [secondAnswerData, setSecondAnswerData] = useState(null)
-	console.log('firstAnswerData', firstAnswerData)
-	console.log('secondAnswerData', secondAnswerData)
-	console.log('route', route)
 
 	const updateData = (params) => {
+		console.log('params', params)
 		if (params.responceType === 'Me') {
-			console.log('me case')
 			setTypeOfMeData(params.typeDataOfMe)
 			setMeData(params.data)
 		} else if (params.responceType === 'question') {
-			console.log('question case')
 			setQuestionData(params.questionData)
 		} else if (params.responceType === 'first') {
-			console.log('first case')
+			console.log('first data', params.answerData)
 			setFirstAnswerData(params.answerData)
 			setTypeOfAnswer(params.answerType)
 		} else if (params.responceType === 'second') {
-			console.log('second case')
+			console.log('first data', params.answerData)
 			setSecondAnswerData(params.answerData)
 			setTypeOfAnswer(params.answerType)
 		}
