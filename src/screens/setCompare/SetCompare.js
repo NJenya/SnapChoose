@@ -9,6 +9,7 @@ const SetCompare = ({ navigation, route }) => {
 	const [firstAnswerData, setFirstAnswerData] = useState(null)
 	const [typeOfAnswer, setTypeOfAnswer] = useState(null)
 	const [secondAnswerData, setSecondAnswerData] = useState(null)
+	console.log('fdf')
 
 	const updateData = (params) => {
 		console.log('params', params)
